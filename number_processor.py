@@ -13,3 +13,10 @@ class NumberProcessorBase:
 
     def file_validation (self) -> bool:
         if not self.input_path.exists():
+            logging.error(f"Input file {self.input_path} is missing.")
+            return False
+        return True
+
+class IntegerProcessor(NumberProcessorBase):
+    #Class for the sorting of even and odd numbers
+    def process_number(self, number: int) -> Tuple[int, int]:
