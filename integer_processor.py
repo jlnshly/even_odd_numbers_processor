@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     datefmt='%H:%M:%S')
 
-class NumberProcessorBase:
+class IntegerProcessorBase:
     #Base class that handles file operations
     def __init__(self, input_path: str):
         self.input_path = Path(input_path)
@@ -17,6 +17,6 @@ class NumberProcessorBase:
             return False
         return True
 
-class IntegerProcessor(NumberProcessorBase):
+class IntegerProcessor(IntegerProcessorBase):
     #Class for the sorting of even and odd numbers
     def __init__(self):
