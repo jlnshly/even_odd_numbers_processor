@@ -19,4 +19,4 @@ class NumberProcessorBase:
 
 class IntegerProcessor(NumberProcessorBase):
     #Class for the sorting of even and odd numbers
-    def process_number(self, number: int) -> Tuple[int, int]:
+    def __init__(self):
